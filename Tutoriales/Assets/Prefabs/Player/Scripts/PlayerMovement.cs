@@ -54,14 +54,9 @@ public class PlayerMovement : MonoBehaviour
         this.movementStrategy = movementStrategy;
     }
 
-    private void Update()
-    {
-        MoverJugador();
-    }
-
     //llama a la estregia de movimiento actual
-    public void MoverJugador()
+    public void MoverJugador(float input)
     {
-        movementStrategy.Move(transform, player);
+        movementStrategy.Move(transform, player, input);
     }
 }
