@@ -1,8 +1,8 @@
 using UnityEngine;
+
 //Estrategia de movimiento acelerado para el jugador
 public class MovimientoAcelerado : IMovementStrategy
 {
-
     //Metodo que implementa el movimiento acelerado
     public void Move(Transform transform, Player player, float direccion)
     {
