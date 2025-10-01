@@ -4,10 +4,9 @@ using UnityEngine;
 public class MovimientoSuave : IMovementStrategy
 {
     //Metodo q implementa el movimiento suave
-    public void Move(Transform transform, Player player)
+    public void Move(Transform transform, Player player, float direccion)
     {
-        //Se detecta las teclas A/D
-        float moverEnX = Input.GetAxis("Horizontal") * player.Velocidad * Time.deltaTime;
+        float moverEnX = direccion * player.Velocidad * Time.deltaTime;
         //Se traslada el transform en el eje X, generando un movimiento lineal sin acelracion
         transform.Translate(moverEnX, 0 , 0);
     }
