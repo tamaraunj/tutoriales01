@@ -8,7 +8,7 @@ public class MovimientoAcelerado : IMovementStrategy
     {
         float movement = direccion * (player.Velocidad + player.Aceleracion) * Time.deltaTime;
         //Se aplica el movimiento en el eje x
-        transform.Translate(movement * Time.deltaTime, 0, 0);
+        transform.Translate(movement, 0, 0);
     }
     
 }
